@@ -3,13 +3,14 @@ package reto1;
 import java.util.Scanner;
 import reto1.Reto1Funciones;
 import reto1.Reto1Funciones2;
+
 public class Reto1 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num1=0;
+		int n = 0;
 		do {
-			//Funcion imprimir para poner lineas por consola
+			// Funcion imprimir para poner lineas por consola
 			Reto1Funciones2.imprimir("-", 100);
 			System.out.println("Elige la operacion");
 			Reto1Funciones2.imprimir("-", 100);
@@ -26,115 +27,50 @@ public class Reto1 {
 			do {
 				try {
 					String s = sc.nextLine();
-					num1 = Integer.parseInt(s);
+					n = Integer.parseInt(s);
 					break;
 				} catch (Exception e) {
 					System.out.println("Formato incorrecto");
 				}
-			}while(true);
-		}while(!(num1>=0 && num1<9));
+			} while (true);
+
+			// Función sumar
+			
+			double num1;
+			double num2;
+			do {
+				try {
+					System.out.println("Introduce dos números");
+					
+					String s = sc.nextLine();
+					num1 = Integer.parseInt(s);
+					
+					s = sc.nextLine();
+					num2 = Integer.parseInt(s);
+					break;
+					
+
+				} catch (Exception e) {
+					System.out.println("Formato incorrecto");
+				}
+
+			} while (true);
+			
+			if(n == 1) {
+				double resultado = Reto1Funciones2.sumar(num1, num2);
+				System.out.println("Resultado de la suma " + resultado );
+			}
+			
+			if (n == 2) {
+				double resultado = Reto1Funciones2.restar(num1, num2);
+				System.out.println("Resultado de la resta " + resultado);
+			}
+			
+			if (n == 3) {
+				double resultado = Reto1Funciones.multiplicar(n, n);
+			}
+
+		} while (!(n >= 0 && n < 9));
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

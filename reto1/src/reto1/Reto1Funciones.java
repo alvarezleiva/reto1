@@ -2,18 +2,18 @@ package reto1;
 
 public class Reto1Funciones {
 
-	public static double multiplicar(int a, int b) {
+	public static double multiplicar(double a, double b) {
 
-		int multi = a * b;
+		double multi = a * b;
 		return multi;
 
 	}
 
-	public static double dividir(int a, int b) {
+	public static double dividir(double a, double b) {
 
-		int divide = a / b;
+		double divide = a / b;
 		if(a == 0 || b == 0) {
-			System.out.println("No puede ser 0");
+			return 0;
 		}
 		return divide;
 
