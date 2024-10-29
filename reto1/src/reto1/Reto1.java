@@ -34,7 +34,6 @@ public class Reto1 {
 				}
 			} while (true);
 
-			// Función sumar
 
 			double num1 = 0;
 			double num2 = 0;
@@ -60,29 +59,32 @@ public class Reto1 {
 
 			} while (true);
 
-			if( n == 0) {
+			//Función parar con un 0
+			if(n == 0) {
 				break;
 			}
+			
+			//Función sumar 
 			else if (n == 1) {
 				double resultado = Reto1Funciones2.sumar(num1, num2);
 				System.out.println("Resultado de la suma " + resultado);
 			}
-
+			//Función restar
 			else if (n == 2) {
 				double resultado = Reto1Funciones2.restar(num1, num2);
 				System.out.println("Resultado de la resta " + resultado);
 			}
-
+			//Función multiplicar
 			else if (n == 3) {
 				double resultado = Reto1Funciones.multiplicar(num1, num2);
 				System.out.println("Resultado de la multiplicación " + resultado);
 			}
-
+			//Función dividir
 			else if (n == 4) {
 				double resultado = Reto1Funciones.dividir(num1, num2);
 				System.out.println("Resultado de la división " + resultado);
 			}
-
+			//Función par
 			else if (n == 5) {
 				boolean par = Reto1Funciones2.esPar(num1);
 				if (par) {
@@ -91,7 +93,7 @@ public class Reto1 {
 				} else {
 					System.out.println(num1 + " no es par");
 				}
-
+			//Función impar
 			} else if (n == 6) {
 				boolean impar = Reto1Funciones2.esImpar(num1);
 				if (impar) {
@@ -100,12 +102,22 @@ public class Reto1 {
 					System.out.println(num1 + " es número par");
 				}
 			}
-			else if( n == 7) {
+			//Función positivo
+			else if(n == 7) {
 				boolean positivo = Reto1Funciones.esPositivo(num1);
 				if(positivo) {
 					System.out.println(num1 + "es positivo");
 				} else {
 					System.out.println(num1 + " no es positivo");
+				}
+			}
+			//Función negativo
+			else if(n == 8) {
+				boolean negativo = Reto1Funciones.esNegativo(num1);
+				if(negativo) {
+					System.out.println(num1 + " es negativo");
+				} else {
+					System.out.println(num1 + " no es negativo");
 				}
 			}
 
