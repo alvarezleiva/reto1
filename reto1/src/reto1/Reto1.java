@@ -35,24 +35,22 @@ public class Reto1 {
 			} while (true);
 
 			// Función sumar
-			
+
 			double num1 = 0;
 			double num2 = 0;
 			do {
 				try {
-					
-					
+
 					System.out.println("Introduce un número");
-					
-					
+
 					String s = sc.nextLine();
 					num1 = Integer.parseInt(s);
-				
-					if( n >= 1 && n <=4) {
+
+					if (n >= 1 && n <= 4) {
 						System.out.println("Introduce otro número");
-					s = sc.nextLine();
-					num2 = Integer.parseInt(s);
-					break;
+						s = sc.nextLine();
+						num2 = Integer.parseInt(s);
+						break;
 					}
 					break;
 
@@ -61,33 +59,55 @@ public class Reto1 {
 				}
 
 			} while (true);
-			
-			if(n == 1) {
-				double resultado = Reto1Funciones2.sumar(num1, num2);
-				System.out.println("Resultado de la suma " + resultado );
+
+			if( n == 0) {
+				break;
 			}
-			
-			if (n == 2) {
+			else if (n == 1) {
+				double resultado = Reto1Funciones2.sumar(num1, num2);
+				System.out.println("Resultado de la suma " + resultado);
+			}
+
+			else if (n == 2) {
 				double resultado = Reto1Funciones2.restar(num1, num2);
 				System.out.println("Resultado de la resta " + resultado);
 			}
-			
-			if (n == 3) {
+
+			else if (n == 3) {
 				double resultado = Reto1Funciones.multiplicar(num1, num2);
 				System.out.println("Resultado de la multiplicación " + resultado);
 			}
-			
-			if (n == 4) {
+
+			else if (n == 4) {
 				double resultado = Reto1Funciones.dividir(num1, num2);
 				System.out.println("Resultado de la división " + resultado);
 			}
-			
-			if (n == 5) {
+
+			else if (n == 5) {
 				boolean par = Reto1Funciones2.esPar(num1);
-				System.out.println(num1 + " es par");
+				if (par) {
+					System.out.println(num1 + " es par");
+
+				} else {
+					System.out.println(num1 + " no es par");
+				}
+
+			} else if (n == 6) {
+				boolean impar = Reto1Funciones2.esImpar(num1);
+				if (impar) {
+					System.out.println(num1 + " es impar");
+				} else {
+					System.out.println(num1 + " es número par");
+				}
 			}
-			
-			
+			else if( n == 7) {
+				boolean positivo = Reto1Funciones.esPositivo(num1);
+				if(positivo) {
+					System.out.println(num1 + "es positivo");
+				} else {
+					System.out.println(num1 + " no es positivo");
+				}
+			}
 
 		} while (!(n >= 0 && n < 9));
 	}
