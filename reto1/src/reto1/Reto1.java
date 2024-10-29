@@ -36,19 +36,25 @@ public class Reto1 {
 
 			// Función sumar
 			
-			double num1;
-			double num2;
+			double num1 = 0;
+			double num2 = 0;
 			do {
 				try {
-					System.out.println("Introduce dos números");
+					
+					
+					System.out.println("Introduce un número");
+					
 					
 					String s = sc.nextLine();
 					num1 = Integer.parseInt(s);
-					
+				
+					if( n >= 1 && n <=4) {
+						System.out.println("Introduce otro número");
 					s = sc.nextLine();
 					num2 = Integer.parseInt(s);
 					break;
-					
+					}
+					break;
 
 				} catch (Exception e) {
 					System.out.println("Formato incorrecto");
@@ -77,8 +83,11 @@ public class Reto1 {
 			}
 			
 			if (n == 5) {
-				
+				boolean par = Reto1Funciones2.esPar(num1);
+				System.out.println(num1 + " es par");
 			}
+			
+			
 
 		} while (!(n >= 0 && n < 9));
 	}
