@@ -67,7 +67,17 @@ public class Reto1 {
 			}
 			
 			if (n == 3) {
-				double resultado = Reto1Funciones.multiplicar(n, n);
+				double resultado = Reto1Funciones.multiplicar(num1, num2);
+				System.out.println("Resultado de la multiplicación " + resultado);
+			}
+			
+			if (n == 4) {
+				double resultado = Reto1Funciones.dividir(num1, num2);
+				System.out.println("Resultado de la división " + resultado);
+			}
+			
+			if (n == 5) {
+				
 			}
 
 		} while (!(n >= 0 && n < 9));
